@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     user = User.where({:username => un}).at(0)
     # if there is no record, redirect back to sign in form
     if user==nil
-      redirect_to("/user_sign_in", ":alert" =>"No one by the name")
+      redirect_to("/user_sign_in", :alert =>"Username does not exist!")
     else
     # if there is a record, check to see if password matches 
       # if so, set the cookie and redirect to homepage
@@ -63,23 +63,22 @@ class UsersController < ApplicationController
   end
 
   def update
+    x = session.fetch(:user_id).to_s
     the_id = params.fetch("the_user_id")
     user = User.where({ :id => the_id }).at(0)
-
-
-    user.username = params.fetch("input_username")
-
-    user.save
-    
-    redirect_to("/users/#{user.username}")
+    if x==the_id
+      user.username = params.fetch("input_username")
+      user.save
+      redirect_to("/users/#{user.username}", {:notice=> "Change has been made!"})
+    else
+      redirect_to("/users/#{user.username}", {:alert=> "You are not the owner of this username!"})
+    end
   end
 
   def destroy
     username = params.fetch("the_username")
     user = User.where({ :username => username }).at(0)
-
     user.destroy
-
     redirect_to("/users")
   end
 
