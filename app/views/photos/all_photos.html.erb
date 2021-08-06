@@ -1,23 +1,23 @@
-<h1>List of photos</h1>
+<h1>照片圈</h1>
 
 <form action="/insert_photo_record">
-  <label for="browser_input">Image</label>
-  <input id="browser_input" type="text" name="input_image" placeholder="Enter a URL for the image...">
+  <label for="browser_input">照片网址</label>
+  <input id="browser_input" type="text" name="input_image" placeholder="请复制照片网址...">
 
-  <label for="browser_caption">Caption</label>
-  <textarea id="browser_caption" name="input_caption" placeholder="Enter a caption for the photo..."></textarea>
+  <label for="browser_caption">留言</label>
+  <textarea id="browser_caption" name="input_caption" placeholder="请添加留言..."></textarea>
 
-  <button>Add photo</button>
+  <button>添加照片</button>
 </form>
 
 <hr>
 
 <table border="1">
   <tr>
-    <th>Image</th>
-    <th>Caption</th>
-    <th>Owner</th>
-    <th>Posted</th>
+    <th>照片</th>
+    <th>留言</th>
+    <th>所有者</th>
+    <th>发布</th>
     <th></th>
   </tr>
 
@@ -41,7 +41,7 @@
 
     <td>
       <a href="/photos/<%= photo.id %>">
-        Show details
+        查看更多
       </a>
     </td>
   </tr>
