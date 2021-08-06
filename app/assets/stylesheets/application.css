@@ -12,3 +12,117 @@
  *
  *= require_self
  */
+
+ body {
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 64px;
+}
+
+.navbar-brand{
+  /*font-family: 'Passion One';*/
+}
+
+.who-delivers{
+  background: url("images/main-hero.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.py-6 {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+/* Grid classes */
+
+.container {
+  width: 0px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row-center {
+  display: flex;
+  justify-content: center;
+}
+
+.one-quarter {
+  width: 24%;
+}
+
+.one-third {
+  width: 32%;
+}
+
+.one-half {
+  width: 49%;
+}
+
+.two-thirds {
+  width: 66%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Utility classes */
+
+.mb-x-small {
+  margin-bottom: 2px;
+}
+
+.mb-small {
+  margin-bottom: 5px;
+}
+
+.mb-medium {
+  margin-bottom: 10px;
+}
+
+.mb-large {
+  margin-bottom: 20px;
+}
+
+.mb-x-large {
+  margin-bottom: 50px;
+}
+
+.centered {
+  text-align: center;
+}
+
+/* Components */
+
+.button {
+  color: teal;
+  border: 1px teal solid;
+  border-radius: 5px;
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  transition: background-color .3s linear;
+}
+
+.button:hover {
+  background-color: teal;
+  color: white;
+}
+
+.player-card {
+  border: thin green solid;
+}
+
+.computer-card {
+  border: thin red solid;
+}
+
+.outcome-card {
+  border: thin red solid;
+  background-color: pink;
+}
